@@ -5,4 +5,10 @@
   roles:
     - users
     - http
+
+- hosts: gp_local2
+  become: yes
+
+  roles:
+    - users
     - php
