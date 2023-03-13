@@ -1,0 +1,13 @@
+- name: Install and start php-fpm
+  apt:
+   name: php-fpm
+   state: present
+  notify:
+   - Restart PHP-FPM
+
+- name: Configure PHP-FPM
+  template:
+   src: php-fpm.conf
+   dest: /etc/php-fpm.conf
+  notify:
+   - Restart PHP-FPM

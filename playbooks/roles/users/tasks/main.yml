@@ -1,0 +1,12 @@
+- name: Add new user
+  user:
+    name: newuser3
+    state: present
+    createhome: yes
+
+- name: Add SSH key for new user
+  authorized_key:
+    user: newuser3
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC0GD9ndyQjc0tYagotNBgMt2ijGSxIVubm3k/B1vOx2v9Hjzuo9IxV678ugHubBYPx0d2NEc+vMorP7e0r0OjSDOXVfXY75Hqxa+qXUaRaLycj6zfdewRL9m/xJTa90uZ5eaD0tcQbOYErQfvR2LDbzaLLRr4qDxpB7vsRKbQgD6bfjf5YUDigf543T4KFMGmP8nzCMeG0QK/wQRq4jaP4chw/P/EVkRad8XCupN6EbMcNjq6q3EJY3K3eUCZ7yxX+kxbkbuoRkAN9zpKMXNcjiO0hkG0Ww2XNrozJNoSTJl57Hcx61kZ9yjVA5HJITFzp46bnKbpqtJ1xBFmBVa9Khk3BmJPi1qmCm0H2Zla+PaoX5O4Zpymx5GVYJtjGjUvo2UvJM5vEjGQshm75rQHdovPqk5rpAbMoUW2LohRo+LkBOb5ew434MzSCvyXgfgJl0ROIj9Lly6Crg2rZkNtOjVU3SUTXtQsXc8Tfjiz4bkD+jub8SD3hwiYagidEzas= administrator@kamino
+    state: present
+
